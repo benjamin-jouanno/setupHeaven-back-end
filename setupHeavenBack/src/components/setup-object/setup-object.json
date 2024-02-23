@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_setup_object_setup_objects",
+  "info": {
+    "displayName": "setupObject",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "ObjectType": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_theme_theme_tags",
+  "info": {
+    "displayName": "themeTag",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "tagName": {
+      "type": "enumeration",
+      "enum": [
+        "cosy",
+        "gaming",
+        "work",
+        "rgb",
+        "pastel",
+        "studying",
+        "minimal",
+        "anime"
+      ]
+    }
+  }
+}

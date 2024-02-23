@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shots",
+  "info": {
+    "singularName": "shot",
+    "pluralName": "shots",
+    "displayName": "Shot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "shotPictures": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cptConfig": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cpt-config.cpt-config"
+    },
+    "themes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "theme.theme-tag"
+    },
+    "setupObjects": {
+      "type": "component",
+      "repeatable": true,
+      "component": "setup-object.setup-object"
+    }
+  }
+}

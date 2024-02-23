@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_cpt_config_cpt_configs",
+  "info": {
+    "displayName": "cptConfig",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "cpu": {
+      "type": "string"
+    },
+    "gpu": {
+      "type": "string"
+    },
+    "motherboard": {
+      "type": "string"
+    },
+    "ram": {
+      "type": "string"
+    },
+    "case": {
+      "type": "string"
+    },
+    "hdd": {
+      "type": "string"
+    },
+    "ssd": {
+      "type": "string"
+    }
+  }
+}

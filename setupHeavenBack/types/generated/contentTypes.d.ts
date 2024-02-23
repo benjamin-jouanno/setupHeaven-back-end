@@ -362,6 +362,36 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiShotShot extends Schema.CollectionType {
+  collectionName: 'shots';
+  info: {
+    singularName: 'shot';
+    pluralName: 'shots';
+    displayName: 'Shot';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    username: Attribute.String & Attribute.Required;
+    shotPictures: Attribute.Media;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+    cptConfig: Attribute.Component<'cpt-config.cpt-config'>;
+    themes: Attribute.Component<'theme.theme-tag', true>;
+    setupObjects: Attribute.Component<'setup-object.setup-object', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::shot.shot', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::shot.shot', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -793,6 +823,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::shot.shot': ApiShotShot;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
